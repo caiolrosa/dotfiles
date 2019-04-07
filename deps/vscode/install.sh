@@ -15,8 +15,9 @@ extensions=(
 
 for ext in "${extensions[@]}"
 do
-  read -p "Install $ext? [Y/n] " OPTION
-  if [[ $OPTION == "y" || $OPTION == "Y" || $OPTION == "" ]]; then
+  # Uncomment the below lines to select which extensions to install
+  #read -p "Install $ext? [Y/n] " OPTION
+  #if [[ $OPTION == "y" || $OPTION == "Y" || $OPTION == "" ]]; then
     code --install-extension $ext
-  fi
+  #fi
 done
