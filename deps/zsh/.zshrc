@@ -11,6 +11,7 @@ fi
 # Alias
 alias zshconfig="vim ~/.zshrc"
 alias vimconfig="vim ~/.vimrc"
+alias tmuxconfig="vim ~/.tmux.conf"
 
 # Plugins
 plugins=(
@@ -21,6 +22,18 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+
+# Default start tmux
+tmux attach &> /dev/null
+if [[ ! $TERM =~ screen ]]; then
+  exec tmux
+fi
+
+# Default start tmux
+tmux attach &> /dev/null
+if [[ ! $TERM =~ screen ]]; then
+  exec tmux
+fi
 
 # NVM Exports
 export NVM_DIR="$HOME/.nvm"
